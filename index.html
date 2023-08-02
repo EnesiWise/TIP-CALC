@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TIP CALCULATOR</title>
+    <link rel="styleSheet" href="style.css" />
+  </head>
+  <body>
+    <div style="display: flex">
+      <button
+        class="colorSquare"
+        id="red"
+        style="width: 100px; height: 100px; background-color: red; color: black"
+        value="red"
+      ></button>
+      <button
+        class="colorSquare"
+        id="yellow"
+        style="
+          width: 100px;
+          height: 100px;
+          background-color: yellow;
+          color: black;
+        "
+        value="yellow"
+      ></button>
+      <button
+        class="colorSquare"
+        id="green"
+        style="
+          width: 100px;
+          height: 100px;
+          background-color: green;
+          color: black;
+        "
+        value="green"
+      ></button>
+    </div>
+    <button id="clearGame" style="color: black">Clear Game</button><br /><br />
+
+    <h1 id="headerr">TIP CALCULATOR</h1>
+    <div class="wrapper">
+      <div class="container" id="topContainer">
+        <div class="title">Bill Total</div>
+        <div class="inputContainer">
+          <span>$</span>
+          <input
+            onkeyup="calculateBill()"
+            type="text"
+            id="billTotalInput"
+            placeholder="0.00"
+          />
+        </div>
+      </div>
+      <div class="container">
+        <div class="title">Tip</div>
+        <div class="inputContainer">
+          <span>%</span>
+          <input
+            onkeyup="calculateBill()"
+            type="text"
+            id="tipInput"
+            placeholder="10"
+          />
+        </div>
+      </div>
+      <div class="container" id="bottom">
+        <div class="splitContainer">
+          <div class="title">People</div>
+          <div class="controls">
+            <span class="buttonContainer">
+              <button class="splitButton" onclick="increasePeople()">
+                <span class="buttonText">+</span>
+              </button>
+            </span>
+            <span class="splitAmount" id="numberOfPeople">1</span>
+            <span class="buttonContainer">
+              <button class="splitButton" onclick="decreasePeople()">
+                <span class="buttonText">-</span>
+              </button>
+            </span>
+          </div>
+        </div>
+        <div class="totalContainer">
+          <div class="title">Total per Person</div>
+          <div class="total" id="perPersonTotal">$0.00</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="gameDiv">
+      <h1 class="gameText" id="playerText">Player:</h1>
+      <h1 class="gameText" id="computerText">Computer:</h1>
+      <h1 class="gameText" id="resultText">Result:</h1>
+
+      <button class="choiceBtn">ROCK</button>
+      <button class="choiceBtn">PAPER</button>
+      <button class="choiceBtn">SCISSORS</button>
+    </div>
+    <br /><br />
+
+    <script src="index.js"></script>
+  </body>
+</html>
